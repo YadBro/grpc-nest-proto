@@ -1,0 +1,8 @@
+{
+  "name": "grpc-nest-proto",
+  "version": "1.0.0",
+  "description": "This is for manage protos",
+  "main": "index.js",
+  "author": "Yadi Apriyadi",
+  "license": "MIT"
+}
