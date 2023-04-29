@@ -3,7 +3,7 @@ syntax = "proto3";
 package product;
 
 service ProductService {
-  rpc CreateProduct (CreateProductRequest) returns (stream reateProductResponse) {}
+  rpc CreateProduct (CreateProductRequest) returns (stream CreateProductResponse) {}
   rpc FindOne (FindOneRequest) returns (stream FindOneResponse) {}
 }
 
