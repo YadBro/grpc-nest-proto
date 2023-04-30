@@ -38,7 +38,7 @@ message AddBookResponse {
  BookResponse book = 1; 
 }
 
-message FindManyRequest {
+message FindManyBookRequest {
  repeated int32 ids = 1;
 }
 
