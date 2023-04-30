@@ -36,3 +36,11 @@ message FindOneResponse {
   repeated string error =2;
   FindOneData data = 3;
 }
+
+message MessageRequest {
+ string msg = 1;
+}
+
+message MessageResponse {
+ string msgLength = 1;
+}
