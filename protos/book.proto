@@ -19,6 +19,14 @@ message FindOneBookRequest {
 }
 
 message FindOneBookResponse {
+ BookResponse book = 1;
+}
+
+message GetAllBookRequest {
+ int32 limit = 1;
+}
+
+message GetAllBookResponse {
  repeated BookResponse books = 1;
 }
 
