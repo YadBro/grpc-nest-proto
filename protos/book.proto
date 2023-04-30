@@ -1,0 +1,51 @@
+syntax="proto3";
+
+package="book";
+
+service BookService {
+ rpc FindOneBook (FindOneBookRequest) returns (FindOneBookResponse) {}
+ rpc AddBook (stream AddBookRequest) returns (AddBookResponse) {}
+ rpc GetAllBook (GetAllBookRequest) returns (stream GetAllBookResponse) {}
+ rpc FindManyBook (stream FindManyBookRequest) returns (stream BookResponse) {}
+}
+
+message BookResponse {
+ int32 id = 1;
+ string name = 2;
+}
+
+message FindOneBookRequest {
+ int32 id = 1;
+}
+
+message FindOneBookResponse {
+ repeated BookResponse books = 1;
+}
+
+message AddBookRequest {
+ string name = 1;
+}
+
+message AddBookResponse {
+ BookResponse book = 1; 
+}
+
+message FindManyRequest {
+ repeated int32 ids = 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
