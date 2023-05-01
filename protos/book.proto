@@ -31,7 +31,7 @@ message FindOneBookResponse {
 
 message GetAllBookRequest {
  int32 limit = 1;
- int32 userId = 2
+ int32 userId = 2;
 }
 
 message GetAllBookResponse {
