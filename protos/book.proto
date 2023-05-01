@@ -7,7 +7,10 @@ service BookService {
  rpc AddBook (stream AddBookRequest) returns (AddBookResponse) {}
  rpc GetAllBook (GetAllBookRequest) returns (stream GetAllBookResponse) {}
  rpc FindManyBook (stream FindManyBookRequest) returns (stream BookResponse) {}
+ rpc UpdateBook (stream UpdateBookRequest) returns (UpdateBookResponse) {}
+ rpc DeleteBook (DeleteBookRequest) returns (stream DeleteBookResponse) {}
 }
+
 
 message User {
  int32 id = 1;
@@ -51,7 +54,24 @@ message FindManyBookRequest {
  repeated int32 ids = 1;
 }
 
+message UpdateBookRequest {
+ int32 id = 1;
+ string name = 2;
+ int32 userId = 3;
+}
 
+message UpdateBookResponse {
+ string name = 1;
+}
+
+message DeleteBookRequest {
+ int32 id = 1;
+ int32 userId = 2;
+}
+
+message DeleteBookResponse {
+ bool status = 1;
+}
 
 
 
