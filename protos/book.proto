@@ -17,6 +17,7 @@ message User {
 message BookResponse {
  int32 id = 1;
  string name = 2;
+ User user = 3;
 }
 
 message FindOneBookRequest {
