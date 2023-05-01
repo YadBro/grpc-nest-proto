@@ -9,6 +9,11 @@ service BookService {
  rpc FindManyBook (stream FindManyBookRequest) returns (stream BookResponse) {}
 }
 
+message User {
+ int32 id = 1;
+ string username = 2;
+}
+
 message BookResponse {
  int32 id = 1;
  string name = 2;
