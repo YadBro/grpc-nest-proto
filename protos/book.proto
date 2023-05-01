@@ -32,6 +32,7 @@ message GetAllBookResponse {
 
 message AddBookRequest {
  string name = 1;
+ int32 userId = 1;
 }
 
 message AddBookResponse {
